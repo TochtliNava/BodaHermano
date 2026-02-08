@@ -3,5 +3,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://tochtlinava.dpdns.org',
+    site: 'https://tochtlinavadev.dpdns.org',
 });
