@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import BG from "../assets/img/bg3.jpg";
 import { LUGAR } from "../placeholders/placeholders.ts";
 import PHOTO_1 from "../assets/img/placeholder1.png";
 ---
@@ -23,11 +24,11 @@ import PHOTO_1 from "../assets/img/placeholder1.png";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="s:black font-[Libre_Baskerville] md:text-red-500">
+  <body class="bg-[url(../assets/img/bg3.jpg)] s:black font-[Libre_Baskerville] md:text-red-500">
     <!-- FOTO -->
     <div>
       <div
-        class="flex bg-amber-600 justify-center md:bg-blue-700 md:justify-end"
+        class="flex justify-center md:bg-blue-700 md:justify-end"
       >
         <img
           src={PHOTO_1.src}
@@ -51,12 +52,12 @@ import PHOTO_1 from "../assets/img/placeholder1.png";
         </div>
       </div>
       <!-- Fecha -->
-      <div class="text-center flex flex-row justify-center gap-5 bg-purple-600">
-        <div class="flex text-[10px] h-15 items-center bg-amber-600">OCT</div>
+      <div class="text-center flex flex-row justify-center gap-5">
+        <div class="flex text-[10px] h-15 items-center">OCT</div>
         <div class="flex text-2xl h-15 items-center">|</div>
-        <div class="flex flex-col text-[16px] font-[450] h-15 justify-center bg-amber-600">
-          <div class="flex items-center bg-green-300">SAB</div>
-          <div class="flex justify-center items-center bg-green-300">17</div>
+        <div class="flex flex-col text-[16px] font-[450] h-15 justify-center">
+          <div class="flex items-center">SAB</div>
+          <div class="flex justify-center items-center">17</div>
         </div>
         <div class="flex text-2xl h-15 items-center">|</div>
         <div class="flex text-[10px] h-15 items-center">2026</div>
