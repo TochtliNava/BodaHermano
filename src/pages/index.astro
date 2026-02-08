@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import PHOTO_1 from "../assets/img/placeholder1.png";
+import { PHOTO_1, LUGAR } from "../placeholders/placeholders";
 ---
 
 <html lang="en">
@@ -8,34 +8,65 @@ import PHOTO_1 from "../assets/img/placeholder1.png";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="s:black md:text-red-500">
+  <body class="s:black font-[Libre_Baskerville] md:text-red-500">
     <!-- FOTO -->
     <div>
       <div
         class="flex bg-amber-600 justify-center md:bg-blue-700 md:justify-end"
       >
-        <img src={PHOTO_1.src} alt="FOTO" class="h-75 m-5 md:h-100" />
+        <img
+          src={PHOTO_1}
+          alt="FOTO"
+          class="h-75 m-5 mt-0 rounded-b-full md:h-100"
+        />
       </div>
     </div>
     <!-- Titulo y texto -->
-    <div class="flex flex-col gap-5 mt-5">
+    <div class="flex flex-col gap-5">
       <div class="flex flex-col text-center gap-3">
-        <div>LA BODA DE</div>
-        <div class="text-3xl">Leslie & Héctor</div>
-        <div>TE INVITAMOS A CELEBRAR NUESTRA UNIÓN ETERNA</div>
+        <div class="text-[10px]">LA BODA DE</div>
+        <div class="text-4xl font-[Pinyon_Script] font-medium">
+          Leslie & Héctor
+        </div>
+        <div>
+          <div class="text-[10px] strong font-medium">
+            TE INVITAMOS A CELEBRAR NUESTRA
+          </div>
+          <div class="text-[10px] strong font-medium">UNIÓN ETERNA</div>
+        </div>
       </div>
       <!-- Fecha -->
-      <div class="text-center">
-        <div>OCT | SAB 17 | 2026</div>
+      <div class="text-center flex flex-row justify-center gap-5 bg-purple-600">
+        <div class="flex text-[10px] h-15 items-center bg-amber-600">OCT</div>
+        <div class="flex text-2xl h-15 items-center">|</div>
+        <div class="flex flex-col text-[16px] font-[450] h-15 justify-center bg-amber-600">
+          <div class="flex items-center bg-green-300">SAB</div>
+          <div class="flex justify-center items-center bg-green-300">17</div>
+        </div>
+        <div class="flex text-2xl h-15 items-center">|</div>
+        <div class="flex text-[10px] h-15 items-center">2026</div>
       </div>
       <!-- UBICACION -->
-      <div class="text-center">
-        <div>TERRAZA CALINDA</div>
+      <div class="text-center text-[10px]">
+        <div>{LUGAR}</div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"
+    ></script>
   </body>
 </html>
