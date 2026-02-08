@@ -1,42 +1,41 @@
 ---
 import "../styles/global.css";
+import PHOTO_1 from "../assets/img/placeholder1.png";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="s:black md:text-red-500">
-		<!-- FOTO -->
-		 <div>
-			<div>
-				<img src="" alt="FOTO">
-			</div>
-		 </div>
-		<!-- Titulo y texto -->
-		<div>
-			<div>
-				LA BODA DE
-			</div>
-			<div>
-				Leslie & Héctor
-			</div>
-			<div>
-				TE INVITAMOS A CELEBRAR NUESTRA UNIÓN ETERNA
-			</div>
-		</div>
-		<!-- Fecha -->
-		<div>
-			<div>OCT | SAB 17 | 2026</div>
-		</div>
-		<!-- UBICACION -->
-		 <div>
-			<div>TERRAZA CALINDA</div>
-		 </div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="s:black md:text-red-500">
+    <!-- FOTO -->
+    <div>
+      <div
+        class="flex bg-amber-600 justify-center md:bg-blue-700 md:justify-end"
+      >
+        <img src={PHOTO_1.src} alt="FOTO" class="h-75 m-5 md:h-100" />
+      </div>
+    </div>
+    <!-- Titulo y texto -->
+    <div class="flex flex-col gap-5 mt-5">
+      <div class="flex flex-col text-center gap-3">
+        <div>LA BODA DE</div>
+        <div class="text-3xl">Leslie & Héctor</div>
+        <div>TE INVITAMOS A CELEBRAR NUESTRA UNIÓN ETERNA</div>
+      </div>
+      <!-- Fecha -->
+      <div class="text-center">
+        <div>OCT | SAB 17 | 2026</div>
+      </div>
+      <!-- UBICACION -->
+      <div class="text-center">
+        <div>TERRAZA CALINDA</div>
+      </div>
+    </div>
+  </body>
 </html>
